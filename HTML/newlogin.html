@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/stylenewlogin.css">
+    <title>Login animado</title>
+</head>
+
+<body>
+
+<!-- Contenedor principal del formulario -->
+<div class="container" id="container">
+    
+    <!-- Formulario de Registro -->
+    <div class="form-container sign-up">
+        <form id="register-form">
+            <h1>Crear tu Cuenta</h1>
+            <div class="form-row">
+                <input type="text" id="register-name" placeholder="Nombre completo" required>
+                <input type="text" id="register-rut" placeholder="Rut" required>
+            </div>
+            <input type="email" id="register-email" placeholder="Correo" required>
+            <select id="register-nationality" required>
+                <option value="" disabled selected>Nacionalidad</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Honduras">Honduras</option>
+                <option value="México">México</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="República Dominicana">República Dominicana</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <select id="register-marital-status" required>
+                <option value="" disabled selected>Estado Civil</option>
+                <option value="Soltero">Soltero/a</option>
+                <option value="Casado">Casado/a</option>
+            </select>
+            <input type="password" id="register-password" placeholder="Contraseña" required>
+            <input type="password" id="confirm-password" placeholder="Confirmar Contraseña" required>
+            <button type="submit">Crear Cuenta</button>
+        </form>
+    </div>
+
+    <!-- Formulario de Inicio de Sesión -->
+    <div class="form-container sign-in">
+        <form id="login-form">
+            <h1>Iniciar Sesión</h1>
+            <input type="email" id="login-email" placeholder="Correo">
+            <input type="password" id="login-password" placeholder="Contraseña">
+            <!-- Enlace para abrir la modal de recuperación -->
+            <a href="#" id="forgot-password-link">¿Olvidó su contraseña?</a>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <!-- Contenedor de los paneles deslizantes -->
+    <div class="toggle-container">
+        <div class="toggle">
+
+            <!-- Panel Izquierdo (para ir a Iniciar Sesión) -->
+            <div class="toggle-panel toggle-left">
+                <div class="logos-container">
+                    <img src="Imagenes/logo-universidad.webp" alt="Logo UNAP" class="logo">
+                </div>
+                <h1>¡Bienvenido de Nuevo!</h1>
+                <p>Ingresa tus datos para iniciar sesión</p>
+                <button class="hidden" id="login">Iniciar Sesión</button>
+
+            </div>
+
+            <!-- Panel Derecho (para ir a Registrarse) -->
+            <div class="toggle-panel toggle-right">
+                <div class="logos-container">
+                    <img src="Imagenes/logo-universidad.webp" alt="Logo UNAP" class="logo">
+                </div>
+                <h1>¡Bienvenido!</h1>
+                <p>Regístrate con tus datos personales para usar todas las funciones del sitio</p>
+                <button class="hidden" id="register">Crear Cuenta</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- === VENTANA MODAL PARA RECUPERAR CONTRASEÑA === -->
+<div id="forgot-password-modal" class="modal-overlay">
+    <div class="modal-content">
+        <span id="close-modal-btn" class="close-button">&times;</span>
+        <h2>Restablecer Contraseña</h2>
+        <form id="recovery-form">
+            <input type="email" placeholder="tu-correo@ejemplo.com" id="recovery-email" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="confirmation-message"></p>
+    </div>
+</div>
+
+<script src="js/scriptnewlogin.js"></script>
+
+</body>
+
+</html>
